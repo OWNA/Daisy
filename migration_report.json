@@ -1,0 +1,2817 @@
+{
+  "timestamp": "2025-07-29T16:02:32.264098",
+  "test_results": [
+    {
+      "test": "Data Collection (1 min)",
+      "command": "python main.py collect --duration 1",
+      "status": "SIMULATED",
+      "notes": "Requires Windows Python environment"
+    },
+    {
+      "test": "Model Training (1 trial)",
+      "command": "python main.py train --trials 1",
+      "status": "SIMULATED",
+      "notes": "Requires Windows Python environment"
+    },
+    {
+      "test": "System Monitoring",
+      "command": "python main.py monitor --refresh 1",
+      "status": "SIMULATED",
+      "notes": "Requires Windows Python environment"
+    }
+  ],
+  "current_schema": {
+    "sqlite_sequence": [
+      {
+        "name": "name",
+        "type": "",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "seq",
+        "type": "",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      }
+    ],
+    "upload_metadata": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "file_name",
+        "type": "VARCHAR(255)",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "file_hash",
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "data_type",
+        "type": "VARCHAR(50)",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_rows",
+        "type": "INTEGER",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "upload_timestamp",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      },
+      {
+        "name": "processing_time_seconds",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "nullable": true,
+        "default": "'completed'",
+        "pk": 0
+      }
+    ],
+    "ohlcv": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "symbol",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "timeframe",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "timestamp",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "open",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "high",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "low",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "close",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "volume",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      }
+    ],
+    "features": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "ohlcv_id",
+        "type": "INTEGER",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "feature_name",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "feature_value",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      }
+    ],
+    "models": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "model_name",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "model_type",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "symbol",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "timeframe",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "model_data",
+        "type": "BLOB",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "feature_list",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "metrics",
+        "type": "TEXT",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "nullable": true,
+        "default": "1",
+        "pk": 0
+      }
+    ],
+    "predictions": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "model_id",
+        "type": "INTEGER",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "timestamp",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "prediction",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "signal",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      }
+    ],
+    "trades": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "model_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "entry_timestamp",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "exit_timestamp",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "direction",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "entry_price",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "exit_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "size",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "pnl_gross",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "pnl_net",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "commission",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "nullable": true,
+        "default": "'open'",
+        "pk": 0
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      }
+    ],
+    "backtest_results": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "model_id",
+        "type": "INTEGER",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "start_date",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "end_date",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "initial_balance",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "final_balance",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_return",
+        "type": "REAL",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "max_drawdown",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "sharpe_ratio",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "win_rate",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_trades",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "profit_factor",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "metrics",
+        "type": "TEXT",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "nullable": true,
+        "default": "CURRENT_TIMESTAMP",
+        "pk": 0
+      }
+    ],
+    "l2_training_data": [
+      {
+        "name": "timestamp",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_ask_spread",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_ask_spread_pct",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "weighted_mid_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "microprice",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "order_book_imbalance_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "order_book_imbalance_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "order_book_imbalance_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_bid_volume_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_ask_volume_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_bid_volume_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_ask_volume_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_buy",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_sell",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_slope",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_slope",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "l2_volatility_1min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "l2_volatility_5min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "realized_volatility",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "order_flow_imbalance",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "trade_intensity",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "effective_spread",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "mid",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "symbol",
+        "type": "TEXT",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_1",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_5",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_10",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      }
+    ],
+    "l2_training_data_expanded": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "timestamp",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "symbol",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "exchange",
+        "type": "TEXT",
+        "nullable": true,
+        "default": "\"bybit\"",
+        "pk": 0
+      },
+      {
+        "name": "mid",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "reconstructed_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "update_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "sequence_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_11",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_11",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_11",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_11",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_12",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_12",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_12",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_12",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_13",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_13",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_13",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_13",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_14",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_14",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_14",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_14",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_15",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_15",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_15",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_15",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_16",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_16",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_16",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_16",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_17",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_17",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_17",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_17",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_18",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_18",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_18",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_18",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_19",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_19",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_19",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_19",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_20",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_20",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_20",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_20",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_21",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_21",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_21",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_21",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_22",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_22",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_22",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_22",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_23",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_23",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_23",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_23",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_24",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_24",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_24",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_24",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_25",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_25",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_25",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_25",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_26",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_26",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_26",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_26",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_27",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_27",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_27",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_27",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_28",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_28",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_28",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_28",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_29",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_29",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_29",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_29",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_30",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_30",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_30",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_30",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_31",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_31",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_31",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_31",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_32",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_32",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_32",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_32",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_33",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_33",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_33",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_33",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_34",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_34",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_34",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_34",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_35",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_35",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_35",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_35",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_36",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_36",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_36",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_36",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_37",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_37",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_37",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_37",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_38",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_38",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_38",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_38",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_39",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_39",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_39",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_39",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_40",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_40",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_40",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_40",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_41",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_41",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_41",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_41",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_42",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_42",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_42",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_42",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_43",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_43",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_43",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_43",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_44",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_44",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_44",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_44",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_45",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_45",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_45",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_45",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_46",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_46",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_46",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_46",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_47",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_47",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_47",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_47",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_48",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_48",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_48",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_48",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_49",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_49",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_49",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_49",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_50",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_50",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_50",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_50",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_return_1min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_return_5min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_volatility",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_direction",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      }
+    ],
+    "l2_training_data_practical": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 1
+      },
+      {
+        "name": "timestamp",
+        "type": "DATETIME",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "symbol",
+        "type": "TEXT",
+        "nullable": false,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "exchange",
+        "type": "TEXT",
+        "nullable": true,
+        "default": "'bybit'",
+        "pk": 0
+      },
+      {
+        "name": "bid_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_price_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "bid_size_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_1",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_2",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_3",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_4",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_5",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_6",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_7",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_8",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_9",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_price_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "ask_size_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "mid_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "spread",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "spread_bps",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_bid_volume_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "total_ask_volume_10",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "weighted_bid_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "weighted_ask_price",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "order_book_imbalance",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "microprice",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_bid",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "price_impact_ask",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_return_1min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_return_5min",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_volatility",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "target_direction",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "update_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "sequence_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      },
+      {
+        "name": "data_quality_score",
+        "type": "REAL",
+        "nullable": true,
+        "default": null,
+        "pk": 0
+      }
+    ]
+  },
+  "migration_strategy": {
+    "phase1": {
+      "description": "Add new tables without modifying existing ones",
+      "tables": [
+        "l2_snapshots",
+        "l2_features",
+        "feature_metadata",
+        "migration_log"
+      ],
+      "risk": "low",
+      "rollback": "DROP new tables"
+    },
+    "phase2": {
+      "description": "Migrate existing L2 data to new schema",
+      "steps": [
+        "Copy data from existing features table to l2_features",
+        "Validate data integrity",
+        "Create optimized views for fast querying"
+      ],
+      "risk": "medium",
+      "rollback": "Restore from backup"
+    },
+    "phase3": {
+      "description": "Optimize storage and add compression",
+      "tables": [
+        "l2_features_optimized"
+      ],
+      "steps": [
+        "Compress feature groups into JSON",
+        "Create materialized views for common queries",
+        "Add partitioning by date if needed"
+      ],
+      "risk": "low",
+      "rollback": "Use uncompressed tables"
+    }
+  },
+  "feature_requirements": {
+    "overview": {
+      "total_features": 118,
+      "new_features": 34,
+      "feature_groups": [
+        "basic",
+        "microstructure",
+        "ofi",
+        "pressure",
+        "stability",
+        "volatility"
+      ],
+      "update_frequency": "100ms (real-time)",
+      "retention_period": "30 days active, archive older"
+    },
+    "storage_estimates": {
+      "per_snapshot": {
+        "l2_snapshot": "~2KB (20 levels \u00d7 4 values)",
+        "computed_features": "~1KB (118 features \u00d7 8 bytes)",
+        "total_per_row": "~3KB"
+      },
+      "daily_volume": {
+        "snapshots_per_day": 864000,
+        "storage_per_day": "~2.6GB",
+        "monthly_storage": "~78GB"
+      }
+    },
+    "performance_requirements": {
+      "write_latency": "<10ms per feature set",
+      "read_latency": "<5ms for latest features",
+      "batch_read": "<100ms for 1000 rows",
+      "concurrent_operations": "Support 10+ concurrent readers"
+    },
+    "feature_categories": {
+      "basic_features": {
+        "count": 10,
+        "examples": [
+          "mid_price",
+          "spread",
+          "microprice"
+        ],
+        "update_frequency": "every snapshot",
+        "storage": "always compute and store"
+      },
+      "ofi_features": {
+        "count": 12,
+        "examples": [
+          "ofi_10s",
+          "ofi_normalized_1m",
+          "ofi_weighted_5m"
+        ],
+        "update_frequency": "rolling window computation",
+        "storage": "store computed values, not raw deltas"
+      },
+      "pressure_features": {
+        "count": 7,
+        "examples": [
+          "bid_pressure_weighted",
+          "pressure_imbalance"
+        ],
+        "update_frequency": "every snapshot",
+        "storage": "compute with exponential decay"
+      },
+      "stability_features": {
+        "count": 9,
+        "examples": [
+          "quote_lifetime",
+          "book_resilience",
+          "spread_stability_50"
+        ],
+        "update_frequency": "rolling statistics",
+        "storage": "maintain rolling buffers"
+      }
+    },
+    "optimization_strategies": {
+      "compression": {
+        "method": "Group related features into JSON",
+        "benefit": "~60% storage reduction",
+        "tradeoff": "Slightly higher CPU usage"
+      },
+      "partitioning": {
+        "method": "Partition by date",
+        "benefit": "Faster queries for recent data",
+        "implementation": "Monthly partitions"
+      },
+      "caching": {
+        "method": "Redis cache for latest features",
+        "benefit": "<1ms read latency",
+        "size": "~100MB for active symbols"
+      }
+    },
+    "integration_notes": {
+      "model_training": "Batch read historical features with timestamp filtering",
+      "real_time_prediction": "Stream latest features from cache or DB",
+      "backtesting": "Efficient time-range queries with proper indexing",
+      "monitoring": "Track feature computation latency and storage growth"
+    }
+  },
+  "architecture_issues": [
+    {
+      "issue": "Database schema lacks support for new features",
+      "impact": "Cannot store enhanced features (OFI, pressure, stability)",
+      "fix": "Implement proposed migration schema",
+      "priority": "HIGH"
+    },
+    {
+      "issue": "No feature versioning system",
+      "impact": "Cannot track feature changes or A/B test",
+      "fix": "Add feature_metadata table and version tracking",
+      "priority": "MEDIUM"
+    },
+    {
+      "issue": "Missing feature computation pipeline optimization",
+      "impact": "Redundant calculations, high latency",
+      "fix": "Implement feature computation caching and batch processing",
+      "priority": "MEDIUM"
+    },
+    {
+      "issue": "No data retention policy",
+      "impact": "Database will grow unbounded",
+      "fix": "Implement data archival and cleanup policies",
+      "priority": "LOW"
+    },
+    {
+      "issue": "Lack of feature monitoring",
+      "impact": "Cannot detect feature drift or computation errors",
+      "fix": "Add feature statistics tracking and alerting",
+      "priority": "MEDIUM"
+    }
+  ]
+}

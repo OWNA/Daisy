@@ -1,0 +1,8 @@
+context:
+  exchange: Bybit
+  focus: System refactoring, ML enhancement, execution optimization
+  instrument: Perpetual Futures
+  market: BTC-USDT
+default_team: a-team
+project_description: Clean, focused trading system for BTC-USDT perpetual futures
+project_name: BTC Perpetual Futures Trading System

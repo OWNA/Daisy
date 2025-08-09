@@ -1,0 +1,70 @@
+base_dir: ./trading_bot_data
+database_path: ./trading_bot.db
+exchange:
+  allow_no_exchange_init: true
+  market_type: linear
+  name: bybit
+  testnet: true
+feature_window: 100
+hht_emd_noise_width: 0.01
+hht_features_imf_bases:
+- hht_freq_imf
+- hht_amp_imf
+hht_imf_count: 3
+initial_balance: 20000
+l2_collection_duration_seconds: 120
+l2_data_folder: l2_data
+l2_features:
+- bid_ask_spread
+- bid_ask_spread_pct
+- weighted_mid_price
+- microprice
+- order_book_imbalance_2
+- order_book_imbalance_3
+- order_book_imbalance_5
+- total_bid_volume_2
+- total_ask_volume_2
+- total_bid_volume_3
+- total_ask_volume_3
+- price_impact_buy
+- price_impact_sell
+- price_impact_1
+- price_impact_5
+- price_impact_10
+- bid_slope
+- ask_slope
+- l2_volatility_1min
+- l2_volatility_5min
+- realized_volatility
+- order_flow_imbalance
+- trade_intensity
+- effective_spread
+l2_max_file_size_mb: 20
+l2_only_mode: true
+l2_websocket_depth: 50
+label_clip_quantiles:
+- 0.005
+- 0.995
+label_shift: -1
+label_volatility_window: 50
+labeling_method: l2_volatility_normalized_return
+lgbm_n_jobs: -1
+min_training_samples: 998
+model_type: regression
+ohlcv_base_features: []
+plot_style: seaborn-v0_8-darkgrid
+random_state: 42
+risk_management:
+  max_drawdown: 0.1
+  position_size_pct: 0.01
+shap_max_samples: 2000
+show_plots: true
+symbol: BTC/USDT:USDT
+ta_features: []
+test_size: 0.2
+timeframe: 1m
+use_hht_features: true
+use_l2_features: true
+use_l2_features_for_training: true
+use_shap_for_importance: true
+prediction_threshold: 0.01  # Lower threshold for more sensitive signal generation

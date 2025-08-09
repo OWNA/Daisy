@@ -1,0 +1,225 @@
+allow_no_exchange_init: false
+allow_offline_training: true
+base_dir: ./
+commission_pct: 0.0006
+database_path: ./trading_bot_live.db
+exchange:
+  allow_no_exchange_init: false
+  market_type: linear
+  name: bybit
+  testnet: false
+exchange_name: bybit
+exchange_testnet: false
+execution:
+  default_entry_order_type: limit
+  default_exit_order_type: limit
+  l2_execution_mode: true
+  max_order_book_levels: 50
+  slippage_model_pct: 0.0002
+fallback_atr_pct_for_backtest: 0.01
+fallback_volatility_pct_for_sizing: 0.01
+feature_window: 100
+fetch_live_limit: 0
+fetch_ohlcv_enabled: false
+fetch_ohlcv_limit: 0
+fetch_ohlcv_limit_for_scaling: 0
+fetch_ohlcv_limit_wfo: 0
+hht_emd_noise_width: 0.01
+hht_features_imf_bases:
+- hht_freq_imf
+- hht_amp_imf
+hht_imf_count: 3
+initial_balance: 10000
+l2_alignment_method: nearest
+l2_buffer_size: 10000
+l2_collection_duration_seconds: 21600
+l2_curve_fit_levels: 3
+l2_data_folder: l2_data
+l2_data_quality:
+  max_spread_bps: 1000
+  min_ask_levels: 1
+  min_bid_levels: 1
+  min_volume_threshold: 0.001
+  timestamp_tolerance_ms: 100
+l2_depth_imbalance_levels:
+- 2
+- 3
+- 5
+l2_features:
+- bid_ask_spread
+- bid_ask_spread_pct
+- weighted_mid_price
+- microprice
+- order_book_imbalance_2
+- order_book_imbalance_3
+- order_book_imbalance_5
+- total_bid_volume_2
+- total_ask_volume_2
+- total_bid_volume_3
+- total_ask_volume_3
+- price_impact_buy
+- price_impact_sell
+- price_impact_1
+- price_impact_5
+- price_impact_10
+- bid_slope
+- ask_slope
+- l2_volatility_1min
+- l2_volatility_5min
+- realized_volatility
+- order_flow_imbalance
+- trade_intensity
+- effective_spread
+l2_log_file: l2_data_collector.log
+l2_max_file_size_mb: 50
+l2_max_time_diff_ms: 1000
+l2_monitoring:
+  alert_on_data_gap: true
+  alert_on_disconnect: true
+  check_connection_interval: 30
+  log_stats_interval: 60
+  max_data_gap_seconds: 10
+l2_only_mode: true
+l2_price_impact_depth_idx: 1
+l2_price_reconstruction:
+  fallback_method: weighted_mid_price
+  method: microprice
+  min_spread_bps: 0.1
+  outlier_threshold: 3.0
+  smoothing_window: 5
+l2_sampling_frequency_ms: 100
+l2_volatility:
+  annualization_factor: 525600
+  estimation_method: realized_volatility
+  min_observations: 10
+  window_sizes:
+  - 60
+  - 300
+  - 900
+l2_websocket_depth: 50
+label_clip_quantiles:
+- 0.005
+- 0.995
+label_shift: -1
+label_volatility_window: 50
+labeling_method: l2_volatility_normalized_return
+leverage: 2
+lgbm_n_jobs: -1
+live_simulation_duration_seconds: 300
+load_existing_ohlcv: false
+market_type: linear
+max_upload_size_gb: 10
+min_simulation_interval_seconds: 5
+min_training_samples: 1000
+model_features:
+- bid_ask_spread
+- bid_ask_spread_pct
+- weighted_mid_price
+- microprice
+- order_book_imbalance_2
+- order_book_imbalance_3
+- order_book_imbalance_5
+- bid_price_1
+- bid_size_1
+- ask_price_1
+- ask_size_1
+- total_bid_volume_2
+- total_ask_volume_2
+- total_bid_volume_3
+- total_ask_volume_3
+- price_impact_buy
+- price_impact_sell
+- bid_slope
+- ask_slope
+- l2_volatility_1min
+model_type: regression
+ohlcv_base_features: []
+optuna_early_stopping_rounds: 50
+optuna_load_if_exists: true
+optuna_n_estimators_max: 2000
+optuna_n_jobs: 1
+optuna_search_spaces:
+  bagging_fraction:
+    high: 1.0
+    low: 0.6
+    type: float
+  bagging_freq:
+    high: 7
+    low: 1
+    type: int
+  feature_fraction:
+    high: 1.0
+    low: 0.6
+    type: float
+  lambda_l1:
+    high: 10.0
+    log: true
+    low: 1e-8
+    type: float
+  lambda_l2:
+    high: 10.0
+    log: true
+    low: 1e-8
+    type: float
+  learning_rate:
+    high: 0.1
+    log: true
+    low: 0.001
+    type: float
+  max_depth:
+    high: 12
+    low: 3
+    type: int
+  min_child_samples:
+    high: 100
+    low: 10
+    type: int
+  n_estimators:
+    high: 1500
+    low: 100
+    step: 50
+    type: int
+  num_leaves:
+    high: 255
+    low: 31
+    type: int
+optuna_study_name: lgbm_opt_l2_only_BTC-USDT
+optuna_timeout_seconds: 7200
+optuna_trials: 200
+performance_metrics:
+- sharpe_ratio_l2
+- information_ratio
+- microstructure_alpha
+- signal_decay_rate
+- execution_efficiency
+- latency_p99_ms
+- throughput_msgs_sec
+plot_style: seaborn-v0_8-darkgrid
+prediction_threshold: 0.15
+processed_dir: ./processed_data
+random_state: 42
+risk_management:
+  fixed_fraction_pct: 0.01
+  max_drawdown: 0.15
+  max_equity_risk_pct: 0.03
+  position_sizing_mode: l2_volatility_target
+  sl_atr_multiplier: 1.0
+  tp_atr_multiplier: 2.0
+  volatility_lookback: 100
+  volatility_target_pct: 0.015
+run_simulation_flag: true
+shap_max_samples: 2000
+show_plots: true
+simulation_duration_seconds: 60
+simulation_threshold: 0.15
+symbol: BTC/USDT:USDT
+ta_features: []
+test_size: 0.2
+timeframe: 1m
+upload_chunk_size: 5000
+upload_dir: ./uploads
+use_hht_features: true
+use_l2_features: true
+use_l2_features_for_training: true
+use_ohlcv_features: false
+use_shap_for_importance: true

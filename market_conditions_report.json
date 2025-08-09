@@ -1,0 +1,155 @@
+{
+  "analysis_time": "2025-07-29T19:48:14.483017",
+  "duration_seconds": 30,
+  "snapshots": [
+    {
+      "timestamp": "2025-07-29T19:47:44.468572",
+      "price": 99992.26820722134,
+      "spread_bps": 3.9799664010088116,
+      "volatility_1h": 0.023375440441844936,
+      "ofi": -0.29550809245172904,
+      "book_resilience": 0.3540711930477767,
+      "ml_features": {
+        "spread_stability_norm_100": 0.6020033598991188,
+        "ofi_normalized_1m": -0.29550809245172904,
+        "pressure_imbalance_weighted": 0.27720473357247155,
+        "book_resilience": 0.3540711930477767,
+        "volume_concentration": 0.41232493647572926,
+        "quote_lifetime": 12.07337921283929,
+        "bid_ask_spread": 39.79658678254025,
+        "book_imbalance_5": -0.0835171087223851,
+        "ofi_weighted_30s": -0.23640647396138326,
+        "spread_rolling_std": 0.7959932802017624
+      },
+      "recommended_strategy": "balanced",
+      "confidence": 0.7,
+      "market_quality": "normal"
+    },
+    {
+      "timestamp": "2025-07-29T19:47:49.470473",
+      "price": 99909.55601879947,
+      "spread_bps": 6.674118374134847,
+      "volatility_1h": 0.022174510863437805,
+      "ofi": 0.5790641453405578,
+      "book_resilience": 0.4730076077147888,
+      "ml_features": {
+        "spread_stability_norm_100": 0.33258816258651536,
+        "ofi_normalized_1m": 0.5790641453405578,
+        "pressure_imbalance_weighted": 0.22893935084788908,
+        "book_resilience": 0.4730076077147888,
+        "volume_concentration": 0.49363888815444484,
+        "quote_lifetime": 3.8693678243224157,
+        "bid_ask_spread": 66.68082035767243,
+        "book_imbalance_5": -0.39030825538791164,
+        "ofi_weighted_30s": 0.4632513162724463,
+        "spread_rolling_std": 1.3348236748269695
+      },
+      "recommended_strategy": "aggressive",
+      "confidence": 0.75,
+      "market_quality": "normal"
+    },
+    {
+      "timestamp": "2025-07-29T19:47:54.472764",
+      "price": 99998.16169960407,
+      "spread_bps": 6.891274410495731,
+      "volatility_1h": 0.02391682931522764,
+      "ofi": -0.6806308798298801,
+      "book_resilience": 0.242910501252654,
+      "ml_features": {
+        "spread_stability_norm_100": 0.31087255895042687,
+        "ofi_normalized_1m": -0.6806308798298801,
+        "pressure_imbalance_weighted": 0.3698908974809999,
+        "book_resilience": 0.242910501252654,
+        "volume_concentration": 0.347269330188101,
+        "quote_lifetime": 10.069372646231907,
+        "bid_ask_spread": 68.91147728170958,
+        "book_imbalance_5": 0.33833081915350227,
+        "ofi_weighted_30s": -0.5445047038639041,
+        "spread_rolling_std": 1.3782548820991463
+      },
+      "recommended_strategy": "aggressive",
+      "confidence": 0.75,
+      "market_quality": "normal"
+    },
+    {
+      "timestamp": "2025-07-29T19:47:59.474427",
+      "price": 100067.97384675436,
+      "spread_bps": 3.0916710302966353,
+      "volatility_1h": 0.0187753467582592,
+      "ofi": 0.12440914591824703,
+      "book_resilience": 0.20675532527029197,
+      "ml_features": {
+        "spread_stability_norm_100": 0.6908328969703365,
+        "ofi_normalized_1m": 0.12440914591824703,
+        "pressure_imbalance_weighted": -0.4393330461511732,
+        "book_resilience": 0.20675532527029197,
+        "volume_concentration": 0.5224315692710677,
+        "quote_lifetime": 8.527471572776534,
+        "bid_ask_spread": 30.937725580249182,
+        "book_imbalance_5": 0.2915330214354743,
+        "ofi_weighted_30s": 0.09952731673459764,
+        "spread_rolling_std": 0.6183342060593271
+      },
+      "recommended_strategy": "balanced",
+      "confidence": 0.7,
+      "market_quality": "good"
+    },
+    {
+      "timestamp": "2025-07-29T19:48:04.475684",
+      "price": 99970.27652506901,
+      "spread_bps": 6.786823438471902,
+      "volatility_1h": 0.01802726993285227,
+      "ofi": -0.6748710177036019,
+      "book_resilience": 0.4847707525777093,
+      "ml_features": {
+        "spread_stability_norm_100": 0.3213176561528097,
+        "ofi_normalized_1m": -0.6748710177036019,
+        "pressure_imbalance_weighted": -0.5963266098695827,
+        "book_resilience": 0.4847707525777093,
+        "volume_concentration": 0.34608805231504186,
+        "quote_lifetime": 16.54665314101556,
+        "bid_ask_spread": 67.84806158708558,
+        "book_imbalance_5": -0.3711767694285639,
+        "ofi_weighted_30s": -0.5398968141628816,
+        "spread_rolling_std": 1.3573646876943806
+      },
+      "recommended_strategy": "aggressive",
+      "confidence": 0.75,
+      "market_quality": "normal"
+    },
+    {
+      "timestamp": "2025-07-29T19:48:09.476521",
+      "price": 99885.53306709489,
+      "spread_bps": 5.75317558162039,
+      "volatility_1h": 0.02022263184709728,
+      "ofi": -0.10041562459619868,
+      "book_resilience": 0.43845209148896247,
+      "ml_features": {
+        "spread_stability_norm_100": 0.424682441837961,
+        "ofi_normalized_1m": -0.10041562459619868,
+        "pressure_imbalance_weighted": -0.07821812705414777,
+        "book_resilience": 0.43845209148896247,
+        "volume_concentration": 0.7079622337973248,
+        "quote_lifetime": 7.722069998549329,
+        "bid_ask_spread": 57.465900979874625,
+        "book_imbalance_5": 0.28701362117940454,
+        "ofi_weighted_30s": -0.08033249967695895,
+        "spread_rolling_std": 1.150635116324078
+      },
+      "recommended_strategy": "balanced",
+      "confidence": 0.7,
+      "market_quality": "normal"
+    }
+  ],
+  "summary": {
+    "avg_spread_bps": 5.529504872671386,
+    "min_spread_bps": 3.0916710302966353,
+    "max_spread_bps": 6.891274410495731,
+    "avg_volatility": 0.02108200485978652,
+    "strategy_distribution": {
+      "balanced": 3,
+      "aggressive": 3
+    },
+    "optimal_windows": 1
+  }
+}

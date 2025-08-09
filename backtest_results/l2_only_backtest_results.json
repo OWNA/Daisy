@@ -1,0 +1,16 @@
+{
+  "backtest_summary": {
+    "initial_balance": "10000",
+    "final_balance": "10000",
+    "total_return": 0.0,
+    "total_trades": 0,
+    "data_points": 180852
+  },
+  "l2_metadata": {
+    "l2_only_mode": true,
+    "l2_feature_count": 8,
+    "model_path": "lgbm_model_BTC_USDTUSDT_1m.txt",
+    "data_source": "l2_training_data",
+    "prediction_threshold": 0.15
+  }
+}

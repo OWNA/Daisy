@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-07-29T19:40:14.114309",
+  "key_features_found": 10,
+  "total_key_features": 10,
+  "avg_computation_time_ms": 5.461931228637695,
+  "performance_target_met": true,
+  "sample_features": {
+    "spread_stability_norm_100": 0.6183362737343094,
+    "ofi_normalized_1m": 0.1328226079046766,
+    "pressure_imbalance_weighted": -0.43497538767533095,
+    "book_resilience": 0.4320645160831923,
+    "volume_concentration": 0.6155696292866712,
+    "quote_lifetime": 5.114505345724872,
+    "bid_ask_spread": 38.19358960830522,
+    "book_imbalance_5": -0.31189013882701855,
+    "ofi_weighted_30s": 0.10625808632374129,
+    "spread_rolling_std": 0.7633274525313811
+  },
+  "spread_stability_value": 0.6183362737343094
+}

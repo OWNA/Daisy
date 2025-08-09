@@ -1,0 +1,13 @@
+{
+  "backtest_summary": {
+    "initial_balance": 10000.0,
+    "final_balance": 9827.335266928985,
+    "total_return": -0.017266473307101477,
+    "total_trades": 333,
+    "data_points": 1000
+  },
+  "l2_metadata": {
+    "l2_only_mode": true,
+    "data_source": "l2_training_data"
+  }
+}

@@ -1,0 +1,36 @@
+agents:
+- file: agents/trading-systems-architect.md
+  name: architect
+  role: lead
+- file: agents/ml-model-enhancement-specialist.md
+  name: ml-specialist
+  role: research
+- file: agents/execution-optimization-specialist.md
+  name: execution-specialist
+  role: execution
+collaboration:
+  primary_pairs:
+  - - architect
+    - ml-specialist
+  - - architect
+    - execution-specialist
+  - - ml-specialist
+    - execution-specialist
+description: Focused 3-agent team for BTC perpetual futures trading system
+name: Trading A-Team Core
+version: 1.0.0
+workflows:
+  code-review:
+  - architect
+  - ml-specialist
+  - execution-specialist
+  daily-standup:
+  - architect
+  - ml-specialist
+  - execution-specialist
+  model-enhancement:
+  - ml-specialist
+  - architect
+  system-optimization:
+  - architect
+  - execution-specialist

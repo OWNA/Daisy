@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-08-06T20:14:02.714239",
+  "tests": [
+    {
+      "name": "Python imports",
+      "command": "python -c \"\nimport modeltrainer\nimport datahandler\nimport featureengineer\nimport modelpredictor\nimport main\nimport cli\nprint('All imports successful')\n\"",
+      "success": true,
+      "return_code": 0,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "CLI help",
+      "command": "python cli.py --help",
+      "success": true,
+      "return_code": 0,
+      "output": "usage: cli.py [-h] [--config CONFIG] [--duration DURATION] [--trials TRIALS]\n              [--paper] [--data DATA]\n              [{collect,train,backtest,trade,status,menu}]\n\nBitcoin L2 Trading System CLI\n\npositional arguments:\n  {collect,train,backtest,trade,status,menu}\n                        Command to execute\n\noptions:\n  -h, --help            show this help message and exit\n  --config CONFIG       Path to config file (default: config.yaml)\n  --duration DURATION   Data collection duration in",
+      "error": ""
+    },
+    {
+      "name": "Main help",
+      "command": "python main.py --help",
+      "success": false,
+      "return_code": 2,
+      "output": "",
+      "error": "python: can't open file 'c:\\\\Users\\\\simon\\\\OneDrive\\\\Desktop\\\\Temp\\\\main.py': [Errno 2] No such file or directory\n"
+    },
+    {
+      "name": "Config validation",
+      "command": "python -c \"import yaml; yaml.safe_load(open('config.yaml'))\"",
+      "success": true,
+      "return_code": 0,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "ModelTrainer initialization",
+      "command": "python -c \"\nimport yaml\nfrom modeltrainer import ModelTrainer\nwith open('config.yaml', 'r') as f:\n    config = yaml.safe_load(f)\ntrainer = ModelTrainer(config)\nprint(f'ModelTrainer initialized with {len(trainer.__dict__)} attributes')\nprint(f'Model path: {trainer.model_path}')\n\"",
+      "success": true,
+      "return_code": 0,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "CLI status",
+      "command": "python cli.py status",
+      "success": false,
+      "return_code": 1
+    },
+    {
+      "name": "TradingSystem initialization",
+      "command": "python -c \"\nimport yaml\nfrom main import TradingSystem\nwith open('config.yaml', 'r') as f:\n    config_path = 'config.yaml'\nsystem = TradingSystem(config_path)\nprint(f'TradingSystem initialized')\nprint(f'Database: {system.db is not None}')\nprint(f'Exchange: {system.exchange is not None}')\n\"",
+      "success": true,
+      "return_code": 0,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "File structure check",
+      "success": false,
+      "missing_files": [
+        "main.py"
+      ]
+    }
+  ]
+}

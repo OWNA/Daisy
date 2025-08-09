@@ -1,0 +1,455 @@
+{
+  "model_file": "lgbm_model_BTC_USDTUSDT_optuna_l2_hht.txt",
+  "features": [
+    "bid_price_1",
+    "bid_size_1",
+    "bid_price_2",
+    "bid_size_2",
+    "bid_price_3",
+    "bid_size_3",
+    "bid_price_4",
+    "bid_size_4",
+    "bid_price_5",
+    "bid_size_5",
+    "bid_price_6",
+    "bid_size_6",
+    "bid_price_7",
+    "bid_size_7",
+    "bid_price_8",
+    "bid_size_8",
+    "bid_price_9",
+    "bid_size_9",
+    "bid_price_10",
+    "bid_size_10",
+    "ask_price_1",
+    "ask_size_1",
+    "ask_price_2",
+    "ask_size_2",
+    "ask_price_3",
+    "ask_size_3",
+    "ask_price_4",
+    "ask_size_4",
+    "ask_price_5",
+    "ask_size_5",
+    "ask_price_6",
+    "ask_size_6",
+    "ask_price_7",
+    "ask_size_7",
+    "ask_price_8",
+    "ask_size_8",
+    "ask_price_9",
+    "ask_size_9",
+    "ask_price_10",
+    "ask_size_10",
+    "mid",
+    "reconstructed_price",
+    "bid_ask_spread",
+    "bid_ask_spread_pct",
+    "weighted_mid_price",
+    "microprice",
+    "order_book_imbalance_2",
+    "order_book_imbalance_3",
+    "order_book_imbalance_5",
+    "total_bid_volume_2",
+    "total_ask_volume_2",
+    "total_bid_volume_3",
+    "total_ask_volume_3",
+    "price_impact_1",
+    "price_impact_5",
+    "price_impact_10",
+    "price_impact_buy",
+    "price_impact_sell",
+    "bid_slope",
+    "ask_slope",
+    "order_flow_imbalance",
+    "effective_spread",
+    "trade_intensity",
+    "l2_volatility_1min",
+    "l2_volatility_5min",
+    "realized_volatility",
+    "hht_freq_imf0",
+    "hht_amp_imf0",
+    "hht_freq_imf1",
+    "hht_amp_imf1",
+    "hht_freq_imf2",
+    "hht_amp_imf2"
+  ],
+  "l2_features": [
+    "bid_price_1",
+    "bid_size_1",
+    "bid_price_2",
+    "bid_size_2",
+    "bid_price_3",
+    "bid_size_3",
+    "bid_price_4",
+    "bid_size_4",
+    "bid_price_5",
+    "bid_size_5",
+    "bid_price_6",
+    "bid_size_6",
+    "bid_price_7",
+    "bid_size_7",
+    "bid_price_8",
+    "bid_size_8",
+    "bid_price_9",
+    "bid_size_9",
+    "bid_price_10",
+    "bid_size_10",
+    "ask_price_1",
+    "ask_size_1",
+    "ask_price_2",
+    "ask_size_2",
+    "ask_price_3",
+    "ask_size_3",
+    "ask_price_4",
+    "ask_size_4",
+    "ask_price_5",
+    "ask_size_5",
+    "ask_price_6",
+    "ask_size_6",
+    "ask_price_7",
+    "ask_size_7",
+    "ask_price_8",
+    "ask_size_8",
+    "ask_price_9",
+    "ask_size_9",
+    "ask_price_10",
+    "ask_size_10",
+    "bid_ask_spread",
+    "bid_ask_spread_pct",
+    "microprice",
+    "order_book_imbalance_2",
+    "order_book_imbalance_3",
+    "order_book_imbalance_5",
+    "total_bid_volume_2",
+    "total_ask_volume_2",
+    "total_bid_volume_3",
+    "total_ask_volume_3",
+    "price_impact_1",
+    "price_impact_5",
+    "price_impact_10",
+    "price_impact_buy",
+    "price_impact_sell",
+    "bid_slope",
+    "ask_slope",
+    "order_flow_imbalance",
+    "effective_spread",
+    "l2_volatility_1min",
+    "l2_volatility_5min",
+    "realized_volatility"
+  ],
+  "hht_features": [
+    "hht_freq_imf0",
+    "hht_amp_imf0",
+    "hht_freq_imf1",
+    "hht_amp_imf1",
+    "hht_freq_imf2",
+    "hht_amp_imf2"
+  ],
+  "training_samples": 3271,
+  "test_samples": 818,
+  "r2_score": 0.4525450486326478,
+  "optuna_best_score": 0.4525450486326478,
+  "optuna_best_params": {
+    "num_leaves": 251,
+    "learning_rate": 0.06860975082791328,
+    "feature_fraction": 0.5990590104179175,
+    "bagging_fraction": 0.9041631556712172,
+    "bagging_freq": 3,
+    "lambda_l1": 0.0010460464820637907,
+    "lambda_l2": 0.21186250714522653,
+    "min_child_samples": 20,
+    "max_depth": 6
+  },
+  "feature_importance": [
+    {
+      "feature": "bid_size_1",
+      "importance": 13.34246088936925
+    },
+    {
+      "feature": "total_bid_volume_2",
+      "importance": 10.28379799425602
+    },
+    {
+      "feature": "weighted_mid_price",
+      "importance": 7.340318635106087
+    },
+    {
+      "feature": "bid_ask_spread",
+      "importance": 7.146040761377662
+    },
+    {
+      "feature": "ask_size_1",
+      "importance": 6.9180704321479425
+    },
+    {
+      "feature": "bid_ask_spread_pct",
+      "importance": 4.5949427774176
+    },
+    {
+      "feature": "hht_amp_imf0",
+      "importance": 3.3169071523007005
+    },
+    {
+      "feature": "total_ask_volume_2",
+      "importance": 3.18618402373977
+    },
+    {
+      "feature": "total_ask_volume_3",
+      "importance": 3.1649985620751977
+    },
+    {
+      "feature": "hht_freq_imf0",
+      "importance": 2.8449914746452123
+    },
+    {
+      "feature": "price_impact_1",
+      "importance": 2.613985074684024
+    },
+    {
+      "feature": "microprice",
+      "importance": 2.501659417990595
+    },
+    {
+      "feature": "total_bid_volume_3",
+      "importance": 2.2581751798279583
+    },
+    {
+      "feature": "realized_volatility",
+      "importance": 1.977551958989352
+    },
+    {
+      "feature": "l2_volatility_1min",
+      "importance": 1.9631784702651203
+    },
+    {
+      "feature": "bid_slope",
+      "importance": 1.9551823339425027
+    },
+    {
+      "feature": "l2_volatility_5min",
+      "importance": 1.9053043127059937
+    },
+    {
+      "feature": "hht_freq_imf1",
+      "importance": 1.7800820514094085
+    },
+    {
+      "feature": "mid",
+      "importance": 1.59042978589423
+    },
+    {
+      "feature": "price_impact_sell",
+      "importance": 1.2533545750193298
+    },
+    {
+      "feature": "hht_amp_imf2",
+      "importance": 1.1287429579533637
+    },
+    {
+      "feature": "bid_size_2",
+      "importance": 1.0878881583921611
+    },
+    {
+      "feature": "bid_price_1",
+      "importance": 0.8902706443332136
+    },
+    {
+      "feature": "hht_freq_imf2",
+      "importance": 0.8806450944393873
+    },
+    {
+      "feature": "hht_amp_imf1",
+      "importance": 0.7899570076260716
+    },
+    {
+      "feature": "trade_intensity",
+      "importance": 0.7108831023797393
+    },
+    {
+      "feature": "ask_size_2",
+      "importance": 0.6362121575511992
+    },
+    {
+      "feature": "price_impact_buy",
+      "importance": 0.5985545030562207
+    },
+    {
+      "feature": "ask_slope",
+      "importance": 0.5807880354113877
+    },
+    {
+      "feature": "bid_price_3",
+      "importance": 0.5758695057593286
+    },
+    {
+      "feature": "bid_price_2",
+      "importance": 0.5444232379086316
+    },
+    {
+      "feature": "ask_price_1",
+      "importance": 0.509515420999378
+    },
+    {
+      "feature": "ask_price_2",
+      "importance": 0.4800214907154441
+    },
+    {
+      "feature": "ask_price_3",
+      "importance": 0.3762572284322232
+    },
+    {
+      "feature": "order_book_imbalance_2",
+      "importance": 0.3609113609418273
+    },
+    {
+      "feature": "bid_price_4",
+      "importance": 0.3186071440577507
+    },
+    {
+      "feature": "bid_size_4",
+      "importance": 0.31835519801825285
+    },
+    {
+      "feature": "ask_size_4",
+      "importance": 0.28099462017416954
+    },
+    {
+      "feature": "ask_price_4",
+      "importance": 0.2600294994190335
+    },
+    {
+      "feature": "bid_size_3",
+      "importance": 0.2493184464983642
+    },
+    {
+      "feature": "reconstructed_price",
+      "importance": 0.22934412164613605
+    },
+    {
+      "feature": "ask_price_6",
+      "importance": 0.1966747986152768
+    },
+    {
+      "feature": "order_book_imbalance_3",
+      "importance": 0.19220140110701323
+    },
+    {
+      "feature": "bid_price_6",
+      "importance": 0.12936652125790715
+    },
+    {
+      "feature": "order_flow_imbalance",
+      "importance": 0.1149485819041729
+    },
+    {
+      "feature": "effective_spread",
+      "importance": 0.10914949886500835
+    },
+    {
+      "feature": "ask_size_3",
+      "importance": 0.10816528042778373
+    },
+    {
+      "feature": "bid_size_5",
+      "importance": 0.10815300047397614
+    },
+    {
+      "feature": "bid_size_7",
+      "importance": 0.09190970193594694
+    },
+    {
+      "feature": "bid_price_5",
+      "importance": 0.07081210054457188
+    },
+    {
+      "feature": "bid_size_9",
+      "importance": 0.0655153002589941
+    },
+    {
+      "feature": "ask_price_5",
+      "importance": 0.0549979992210865
+    },
+    {
+      "feature": "ask_size_7",
+      "importance": 0.048854900524020195
+    },
+    {
+      "feature": "ask_price_8",
+      "importance": 0.03541600052267313
+    },
+    {
+      "feature": "bid_price_8",
+      "importance": 0.03537579998373985
+    },
+    {
+      "feature": "bid_price_9",
+      "importance": 0.029820499941706657
+    },
+    {
+      "feature": "bid_size_6",
+      "importance": 0.029162399470806122
+    },
+    {
+      "feature": "bid_size_8",
+      "importance": 0.025935230776667595
+    },
+    {
+      "feature": "ask_size_8",
+      "importance": 0.024671699851751328
+    },
+    {
+      "feature": "price_impact_5",
+      "importance": 0.020993800833821297
+    },
+    {
+      "feature": "ask_price_7",
+      "importance": 0.01846119947731495
+    },
+    {
+      "feature": "ask_size_6",
+      "importance": 0.0
+    },
+    {
+      "feature": "ask_size_5",
+      "importance": 0.0
+    },
+    {
+      "feature": "bid_price_10",
+      "importance": 0.0
+    },
+    {
+      "feature": "ask_size_9",
+      "importance": 0.0
+    },
+    {
+      "feature": "ask_price_10",
+      "importance": 0.0
+    },
+    {
+      "feature": "price_impact_10",
+      "importance": 0.0
+    },
+    {
+      "feature": "bid_price_7",
+      "importance": 0.0
+    },
+    {
+      "feature": "order_book_imbalance_5",
+      "importance": 0.0
+    },
+    {
+      "feature": "ask_size_10",
+      "importance": 0.0
+    },
+    {
+      "feature": "bid_size_10",
+      "importance": 0.0
+    },
+    {
+      "feature": "ask_price_9",
+      "importance": 0.0
+    }
+  ],
+  "timestamp": "2025-07-07T17:46:11.964681"
+}

@@ -1,0 +1,159 @@
+{
+  "timestamp": "20250806_143726",
+  "feature_columns": [
+    "bid_price_1",
+    "bid_size_1",
+    "bid_price_2",
+    "bid_size_2",
+    "bid_price_3",
+    "bid_size_3",
+    "bid_price_4",
+    "bid_size_4",
+    "bid_price_5",
+    "bid_size_5",
+    "bid_price_6",
+    "bid_size_6",
+    "bid_price_7",
+    "bid_size_7",
+    "bid_price_8",
+    "bid_size_8",
+    "bid_price_9",
+    "bid_size_9",
+    "bid_price_10",
+    "bid_size_10",
+    "ask_price_1",
+    "ask_size_1",
+    "ask_price_2",
+    "ask_size_2",
+    "ask_price_3",
+    "ask_size_3",
+    "ask_price_4",
+    "ask_size_4",
+    "ask_price_5",
+    "ask_size_5",
+    "ask_price_6",
+    "ask_size_6",
+    "ask_price_7",
+    "ask_size_7",
+    "ask_price_8",
+    "ask_size_8",
+    "ask_price_9",
+    "ask_size_9",
+    "ask_price_10",
+    "ask_size_10",
+    "mid_price",
+    "spread",
+    "spread_bps",
+    "total_bid_volume_10",
+    "total_ask_volume_10",
+    "weighted_bid_price",
+    "weighted_ask_price",
+    "order_book_imbalance",
+    "microprice",
+    "price_impact_bid",
+    "price_impact_ask",
+    "target_return_1min",
+    "target_return_5min",
+    "target_volatility",
+    "target_direction",
+    "update_id",
+    "sequence_id",
+    "exchange_timestamp",
+    "sequence",
+    "price_return_1",
+    "price_return_5",
+    "price_return_10",
+    "volatility_10",
+    "volatility_30",
+    "volatility_100",
+    "spread_ma_10",
+    "spread_ma_30",
+    "total_bid_volume",
+    "total_ask_volume",
+    "volume_imbalance",
+    "bid_ask_ratio",
+    "depth_ratio",
+    "price_ma_10",
+    "price_ma_30",
+    "price_ma_100",
+    "momentum_10",
+    "momentum_30",
+    "volume_ma_10",
+    "volume_momentum",
+    "weighted_price_diff",
+    "microprice_diff",
+    "microprice_momentum"
+  ],
+  "prediction_horizons": [
+    10,
+    30,
+    100,
+    300
+  ],
+  "model_performance": {
+    "10": {
+      "rf": {
+        "train_r2": 0.8250052720306906,
+        "test_r2": 0.26678738442788563,
+        "test_mse": 9.781543201045457e-10,
+        "cv_mean": 0.2604301985871112,
+        "cv_std": 0.03526252845256545
+      },
+      "gbm": {
+        "train_r2": 0.9685011762286887,
+        "test_r2": 0.21377676573270077,
+        "test_mse": 1.0488740057548671e-09,
+        "cv_mean": 0.21865054719519972,
+        "cv_std": 0.04382585213765088
+      }
+    },
+    "30": {
+      "rf": {
+        "train_r2": 0.8988219065884374,
+        "test_r2": -0.09968563834743649,
+        "test_mse": 2.2440203834655053e-09,
+        "cv_mean": 0.07384188294186078,
+        "cv_std": 0.15527754008022535
+      },
+      "gbm": {
+        "train_r2": 0.9894525900444142,
+        "test_r2": -0.10762202452244418,
+        "test_mse": 2.260215386588884e-09,
+        "cv_mean": -0.03289991497840883,
+        "cv_std": 0.15701100855494687
+      }
+    },
+    "100": {
+      "rf": {
+        "train_r2": 0.9818664727183178,
+        "test_r2": -2.865235603503808,
+        "test_mse": 1.5976219360552558e-08,
+        "cv_mean": -0.17816469134680926,
+        "cv_std": 0.6722575506460785
+      },
+      "gbm": {
+        "train_r2": 0.9978211405114326,
+        "test_r2": -3.3029793846813567,
+        "test_mse": 1.7785550379202675e-08,
+        "cv_mean": -0.19899872838496604,
+        "cv_std": 0.6582544681467969
+      }
+    },
+    "300": {
+      "rf": {
+        "train_r2": 0.9886304307976023,
+        "test_r2": -20.22649729556048,
+        "test_mse": 6.922063867091704e-08,
+        "cv_mean": 0.5819728056061421,
+        "cv_std": 0.10563381006322763
+      },
+      "gbm": {
+        "train_r2": 0.9983217620130194,
+        "test_r2": -20.30757687680715,
+        "test_mse": 6.948504312347072e-08,
+        "cv_mean": 0.5687474441276492,
+        "cv_std": 0.09395118290423708
+      }
+    }
+  }
+}

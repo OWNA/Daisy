@@ -1,0 +1,9 @@
+{
+  "initial_balance": 10000,
+  "final_balance": 10000,
+  "total_return": 0.0,
+  "total_trades": 0,
+  "win_rate": 0,
+  "strategy": "L2-Only (No TA Indicators)",
+  "features_used": "L2 order book features only"
+}

@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-07-28T19:02:19.191947",
+  "tests": [
+    {
+      "name": "Python imports",
+      "command": "python -c \"\nimport modeltrainer\nimport datahandler\nimport featureengineer\nimport modelpredictor\nimport main\nimport cli\nprint('All imports successful')\n\"",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "CLI help",
+      "command": "python cli.py --help",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "Main help",
+      "command": "python main.py --help",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "Config validation",
+      "command": "python -c \"import yaml; yaml.safe_load(open('config.yaml'))\"",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "ModelTrainer initialization",
+      "command": "python -c \"\nimport yaml\nfrom modeltrainer import ModelTrainer\nwith open('config.yaml', 'r') as f:\n    config = yaml.safe_load(f)\ntrainer = ModelTrainer(config)\nprint(f'ModelTrainer initialized with {len(trainer.__dict__)} attributes')\nprint(f'Model path: {trainer.model_path}')\n\"",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "CLI status",
+      "command": "python cli.py status",
+      "success": false,
+      "return_code": 127
+    },
+    {
+      "name": "TradingSystem initialization",
+      "command": "python -c \"\nimport yaml\nfrom main import TradingSystem\nwith open('config.yaml', 'r') as f:\n    config_path = 'config.yaml'\nsystem = TradingSystem(config_path)\nprint(f'TradingSystem initialized')\nprint(f'Database: {system.db is not None}')\nprint(f'Exchange: {system.exchange is not None}')\n\"",
+      "success": false,
+      "return_code": 127,
+      "output": "",
+      "error": "/bin/sh: 1: python: not found\n"
+    },
+    {
+      "name": "File structure check",
+      "success": true,
+      "files_checked": 12
+    }
+  ]
+}

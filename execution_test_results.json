@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-07-29T19:43:44.865590",
+  "test_results": [
+    {
+      "strategy": "passive",
+      "success": false,
+      "wait_time": 3,
+      "slippage_bps": null,
+      "cost_bps": 7.5
+    },
+    {
+      "strategy": "aggressive",
+      "success": true,
+      "chunks": 4,
+      "slippage_bps": 10.744703050771365,
+      "cost_bps": 7.5
+    },
+    {
+      "strategy": "urgent",
+      "success": true,
+      "execution_time": 0.1,
+      "slippage_bps": 24.434023258000057,
+      "cost_bps": 7.5
+    },
+    {
+      "strategy": "balanced",
+      "success": true,
+      "splits": 2,
+      "slippage_bps": 1.2115701352622472,
+      "cost_bps": 3.4999999999999996
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "successful": 3,
+    "avg_slippage_bps": 12.130098814677892,
+    "avg_cost_bps": 6.5,
+    "strategies_tested": [
+      "balanced",
+      "urgent",
+      "passive",
+      "aggressive"
+    ]
+  }
+}

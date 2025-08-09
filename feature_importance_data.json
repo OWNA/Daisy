@@ -1,0 +1,842 @@
+{
+  "features": [
+    {
+      "feature": "price_impact_ask",
+      "importance_split": 462,
+      "importance_gain": 10028.067548573017,
+      "importance_gain_pct": 3.282585762642721,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "l2_volatility_50",
+      "importance_split": 503,
+      "importance_gain": 8386.752883434296,
+      "importance_gain_pct": 2.7453181260113997,
+      "category": "Volatility"
+    },
+    {
+      "feature": "l2_volatility_10",
+      "importance_split": 513,
+      "importance_gain": 8065.759277567267,
+      "importance_gain_pct": 2.640244138883302,
+      "category": "Volatility"
+    },
+    {
+      "feature": "ofi_weighted_5m",
+      "importance_split": 379,
+      "importance_gain": 8022.924359798431,
+      "importance_gain_pct": 2.626222564883039,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "l2_volatility_200",
+      "importance_split": 475,
+      "importance_gain": 7905.531231701374,
+      "importance_gain_pct": 2.587795120207686,
+      "category": "Volatility"
+    },
+    {
+      "feature": "weighted_ask_price",
+      "importance_split": 456,
+      "importance_gain": 7756.226267576218,
+      "importance_gain_pct": 2.538921661073591,
+      "category": "Other"
+    },
+    {
+      "feature": "price_impact_bid",
+      "importance_split": 461,
+      "importance_gain": 7463.1044780015945,
+      "importance_gain_pct": 2.442971229096801,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "spread_stability_100",
+      "importance_split": 431,
+      "importance_gain": 7342.988647907972,
+      "importance_gain_pct": 2.4036525356572613,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "book_shape_stability",
+      "importance_split": 325,
+      "importance_gain": 6624.3653836250305,
+      "importance_gain_pct": 2.168418530240665,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "spread_stability_norm_100",
+      "importance_split": 393,
+      "importance_gain": 6623.957673370838,
+      "importance_gain_pct": 2.1682850704420336,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "weighted_bid_price",
+      "importance_split": 430,
+      "importance_gain": 6572.826504766941,
+      "importance_gain_pct": 2.1515478032394086,
+      "category": "Other"
+    },
+    {
+      "feature": "spread_stability_norm_50",
+      "importance_split": 383,
+      "importance_gain": 6152.054279208183,
+      "importance_gain_pct": 2.013812301334935,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "spread_stability_50",
+      "importance_split": 348,
+      "importance_gain": 5669.537924170494,
+      "importance_gain_pct": 1.8558654875927036,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "ofi_weighted_1m",
+      "importance_split": 311,
+      "importance_gain": 5337.800390839577,
+      "importance_gain_pct": 1.7472745852506824,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "order_book_imbalance",
+      "importance_split": 321,
+      "importance_gain": 4984.161956310272,
+      "importance_gain_pct": 1.6315146459915633,
+      "category": "Order Book Imbalance"
+    },
+    {
+      "feature": "weighted_mid_price",
+      "importance_split": 272,
+      "importance_gain": 4874.04878744483,
+      "importance_gain_pct": 1.5954702218144836,
+      "category": "Other"
+    },
+    {
+      "feature": "spread",
+      "importance_split": 294,
+      "importance_gain": 4522.030565023422,
+      "importance_gain_pct": 1.4802406424848407,
+      "category": "Spread Features"
+    },
+    {
+      "feature": "ofi_weighted_30s",
+      "importance_split": 282,
+      "importance_gain": 4433.508984446526,
+      "importance_gain_pct": 1.451264004794591,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "spread_stability_10",
+      "importance_split": 290,
+      "importance_gain": 4212.102868556976,
+      "importance_gain_pct": 1.378788968077823,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "ofi_10s",
+      "importance_split": 303,
+      "importance_gain": 3938.8919083476067,
+      "importance_gain_pct": 1.2893561432751177,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "ofi_normalized_1m",
+      "importance_split": 268,
+      "importance_gain": 3760.913283482194,
+      "importance_gain_pct": 1.2310966533775785,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "ofi_weighted_10s",
+      "importance_split": 231,
+      "importance_gain": 3723.1239908337593,
+      "importance_gain_pct": 1.2187267133639867,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "spread_bps",
+      "importance_split": 236,
+      "importance_gain": 3701.6118836402893,
+      "importance_gain_pct": 1.2116849442040076,
+      "category": "Spread Features"
+    },
+    {
+      "feature": "ofi_normalized_30s",
+      "importance_split": 254,
+      "importance_gain": 3641.858816385269,
+      "importance_gain_pct": 1.1921253863035952,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "ask_size_5",
+      "importance_split": 219,
+      "importance_gain": 3635.3258100152016,
+      "importance_gain_pct": 1.1899868732158279,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_size_7",
+      "importance_split": 206,
+      "importance_gain": 3567.9187507629395,
+      "importance_gain_pct": 1.1679218590013418,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ofi_1m",
+      "importance_split": 241,
+      "importance_gain": 3536.546213209629,
+      "importance_gain_pct": 1.157652378404841,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "mid_price",
+      "importance_split": 214,
+      "importance_gain": 3524.0053656995296,
+      "importance_gain_pct": 1.1535472597178429,
+      "category": "Other"
+    },
+    {
+      "feature": "ask_pressure_weighted",
+      "importance_split": 155,
+      "importance_gain": 3479.4833412766457,
+      "importance_gain_pct": 1.1389734285398323,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "ofi_normalized_10s",
+      "importance_split": 268,
+      "importance_gain": 3467.5258531570435,
+      "importance_gain_pct": 1.1350592666070118,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "ofi_30s",
+      "importance_split": 240,
+      "importance_gain": 3439.6071821451187,
+      "importance_gain_pct": 1.1259203740405481,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "price_impact_5",
+      "importance_split": 210,
+      "importance_gain": 3413.5838401317596,
+      "importance_gain_pct": 1.1174018981152847,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "price_impact_buy",
+      "importance_split": 152,
+      "importance_gain": 3393.2080175876617,
+      "importance_gain_pct": 1.1107320801606873,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "spread_stability_norm_10",
+      "importance_split": 273,
+      "importance_gain": 3305.113039255142,
+      "importance_gain_pct": 1.0818950863696153,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "ask_size_1",
+      "importance_split": 214,
+      "importance_gain": 3251.742946624756,
+      "importance_gain_pct": 1.064424930193378,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ofi_5m",
+      "importance_split": 226,
+      "importance_gain": 3148.1684076189995,
+      "importance_gain_pct": 1.0305208598961093,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "ofi_normalized_5m",
+      "importance_split": 194,
+      "importance_gain": 3141.389241695404,
+      "importance_gain_pct": 1.0283017689859615,
+      "category": "Order Flow Imbalance"
+    },
+    {
+      "feature": "bid_size_6",
+      "importance_split": 200,
+      "importance_gain": 3089.9812904000282,
+      "importance_gain_pct": 1.0114738997886856,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_size_4",
+      "importance_split": 226,
+      "importance_gain": 3067.3173290491104,
+      "importance_gain_pct": 1.0040550829034531,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "microprice",
+      "importance_split": 178,
+      "importance_gain": 3049.9122076034546,
+      "importance_gain_pct": 0.998357693692836,
+      "category": "Other"
+    },
+    {
+      "feature": "ask_size_7",
+      "importance_split": 180,
+      "importance_gain": 3016.388428926468,
+      "importance_gain_pct": 0.9873840262277899,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "book_depth_asymmetry",
+      "importance_split": 181,
+      "importance_gain": 3002.4699164628983,
+      "importance_gain_pct": 0.9828279429516475,
+      "category": "Other"
+    },
+    {
+      "feature": "ask_size_6",
+      "importance_split": 180,
+      "importance_gain": 2997.4969061613083,
+      "importance_gain_pct": 0.981200078686234,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "book_shape_1_5",
+      "importance_split": 179,
+      "importance_gain": 2996.26051568985,
+      "importance_gain_pct": 0.9807953588597053,
+      "category": "Other"
+    },
+    {
+      "feature": "ask_size_3",
+      "importance_split": 207,
+      "importance_gain": 2922.988948702812,
+      "importance_gain_pct": 0.9568106577761551,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_size_10",
+      "importance_split": 173,
+      "importance_gain": 2921.4839841127396,
+      "importance_gain_pct": 0.9563180229476876,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_pressure",
+      "importance_split": 171,
+      "importance_gain": 2891.61279964447,
+      "importance_gain_pct": 0.9465399949902703,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "ask_size_9",
+      "importance_split": 169,
+      "importance_gain": 2777.9013183116913,
+      "importance_gain_pct": 0.9093176998806698,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_size_3",
+      "importance_split": 213,
+      "importance_gain": 2729.4341114982963,
+      "importance_gain_pct": 0.8934524534341247,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_size_10",
+      "importance_split": 145,
+      "importance_gain": 2719.759962439537,
+      "importance_gain_pct": 0.8902857192839859,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_pressure",
+      "importance_split": 155,
+      "importance_gain": 2621.8980646133423,
+      "importance_gain_pct": 0.8582516238858975,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "bid_size_4",
+      "importance_split": 198,
+      "importance_gain": 2561.923934996128,
+      "importance_gain_pct": 0.8386197034730387,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_price_2",
+      "importance_split": 163,
+      "importance_gain": 2543.8494135141373,
+      "importance_gain_pct": 0.832703192979269,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "price_impact_sell",
+      "importance_split": 162,
+      "importance_gain": 2518.8618371486664,
+      "importance_gain_pct": 0.8245237643881729,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "ask_size_2",
+      "importance_split": 192,
+      "importance_gain": 2492.126910328865,
+      "importance_gain_pct": 0.8157723584249708,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_size_2",
+      "importance_split": 193,
+      "importance_gain": 2422.348378688097,
+      "importance_gain_pct": 0.7929310668807495,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_size_9",
+      "importance_split": 152,
+      "importance_gain": 2410.203336119652,
+      "importance_gain_pct": 0.7889555109095953,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_price_2",
+      "importance_split": 156,
+      "importance_gain": 2402.028086721897,
+      "importance_gain_pct": 0.7862794262951731,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_pressure_weighted",
+      "importance_split": 141,
+      "importance_gain": 2358.176098585129,
+      "importance_gain_pct": 0.7719249246701998,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "bid_size_5",
+      "importance_split": 168,
+      "importance_gain": 2228.332773268223,
+      "importance_gain_pct": 0.7294220347569668,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "bid_price_3",
+      "importance_split": 163,
+      "importance_gain": 2214.0979036688805,
+      "importance_gain_pct": 0.724762395194953,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_4",
+      "importance_split": 152,
+      "importance_gain": 2155.2980585098267,
+      "importance_gain_pct": 0.7055148648378035,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "price_impact_10",
+      "importance_split": 122,
+      "importance_gain": 2073.465838253498,
+      "importance_gain_pct": 0.6787279211083416,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "ask_price_3",
+      "importance_split": 136,
+      "importance_gain": 2043.614663362503,
+      "importance_gain_pct": 0.6689564430822206,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_size_1",
+      "importance_split": 157,
+      "importance_gain": 1921.0408752597868,
+      "importance_gain_pct": 0.6288331621260191,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_size_8",
+      "importance_split": 121,
+      "importance_gain": 1871.4224483966827,
+      "importance_gain_pct": 0.6125910755229296,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "pressure_imbalance",
+      "importance_split": 100,
+      "importance_gain": 1786.9134831428528,
+      "importance_gain_pct": 0.584927926584791,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "bid_size_8",
+      "importance_split": 122,
+      "importance_gain": 1747.7331249713898,
+      "importance_gain_pct": 0.5721026354421133,
+      "category": "Raw Sizes"
+    },
+    {
+      "feature": "ask_price_5",
+      "importance_split": 113,
+      "importance_gain": 1740.044644832611,
+      "importance_gain_pct": 0.5695858897862159,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_7",
+      "importance_split": 85,
+      "importance_gain": 1641.9989464432,
+      "importance_gain_pct": 0.537491629146015,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_5",
+      "importance_split": 110,
+      "importance_gain": 1631.4136534929276,
+      "importance_gain_pct": 0.5340266413242176,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_6",
+      "importance_split": 95,
+      "importance_gain": 1566.6096745729446,
+      "importance_gain_pct": 0.5128137189406219,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "book_resilience",
+      "importance_split": 146,
+      "importance_gain": 1498.759884789586,
+      "importance_gain_pct": 0.49060378139658856,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "bid_price_8",
+      "importance_split": 78,
+      "importance_gain": 1494.9736394882202,
+      "importance_gain_pct": 0.4893643925651975,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_7",
+      "importance_split": 87,
+      "importance_gain": 1458.0145032405853,
+      "importance_gain_pct": 0.4772661957931461,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_4",
+      "importance_split": 108,
+      "importance_gain": 1412.3511924743652,
+      "importance_gain_pct": 0.4623187761561839,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_6",
+      "importance_split": 83,
+      "importance_gain": 1336.9402360916138,
+      "importance_gain_pct": 0.4376337677465111,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_10",
+      "importance_split": 71,
+      "importance_gain": 1301.9405632019043,
+      "importance_gain_pct": 0.4261769813449017,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "volume_concentration",
+      "importance_split": 125,
+      "importance_gain": 1295.7404655218124,
+      "importance_gain_pct": 0.42414744252567427,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "bid_price_1",
+      "importance_split": 95,
+      "importance_gain": 1275.0645605325699,
+      "importance_gain_pct": 0.4173793956394026,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_1",
+      "importance_split": 100,
+      "importance_gain": 1261.1626255512238,
+      "importance_gain_pct": 0.41282873883320215,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_price_9",
+      "importance_split": 66,
+      "importance_gain": 1119.5773425102234,
+      "importance_gain_pct": 0.3664822386666508,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "bid_ask_spread",
+      "importance_split": 60,
+      "importance_gain": 1096.8488574028015,
+      "importance_gain_pct": 0.3590423005869879,
+      "category": "Spread Features"
+    },
+    {
+      "feature": "total_bid_volume_1",
+      "importance_split": 88,
+      "importance_gain": 976.8850038051605,
+      "importance_gain_pct": 0.31977335510532245,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "bid_ask_spread_pct",
+      "importance_split": 54,
+      "importance_gain": 884.5452444553375,
+      "importance_gain_pct": 0.28954687548705177,
+      "category": "Spread Features"
+    },
+    {
+      "feature": "ask_price_8",
+      "importance_split": 54,
+      "importance_gain": 809.1875712871552,
+      "importance_gain_pct": 0.2648793087949069,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_9",
+      "importance_split": 51,
+      "importance_gain": 806.3677047491074,
+      "importance_gain_pct": 0.26395625420781793,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "ask_price_10",
+      "importance_split": 52,
+      "importance_gain": 797.4856877326965,
+      "importance_gain_pct": 0.2610488164128093,
+      "category": "Raw Prices"
+    },
+    {
+      "feature": "total_ask_volume_10",
+      "importance_split": 76,
+      "importance_gain": 785.7531027197838,
+      "importance_gain_pct": 0.2572082742210225,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "order_book_imbalance_5",
+      "importance_split": 67,
+      "importance_gain": 777.8579970598221,
+      "importance_gain_pct": 0.2546238918055253,
+      "category": "Order Book Imbalance"
+    },
+    {
+      "feature": "quote_lifetime",
+      "importance_split": 88,
+      "importance_gain": 753.1281755566597,
+      "importance_gain_pct": 0.2465288366430251,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "pressure_imbalance_weighted",
+      "importance_split": 39,
+      "importance_gain": 730.2624750137329,
+      "importance_gain_pct": 0.23904398248827383,
+      "category": "Book Pressure"
+    },
+    {
+      "feature": "bid_volume_concentration",
+      "importance_split": 68,
+      "importance_gain": 719.1241174340248,
+      "importance_gain_pct": 0.23539795459373933,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_2",
+      "importance_split": 64,
+      "importance_gain": 705.576894402504,
+      "importance_gain_pct": 0.23096340913109492,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_1",
+      "importance_split": 63,
+      "importance_gain": 699.5752413272858,
+      "importance_gain_pct": 0.22899882913184716,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "order_book_imbalance_2",
+      "importance_split": 65,
+      "importance_gain": 695.3021146059036,
+      "importance_gain_pct": 0.2276000646271572,
+      "category": "Order Book Imbalance"
+    },
+    {
+      "feature": "mid_price_return",
+      "importance_split": 73,
+      "importance_gain": 643.9158235788345,
+      "importance_gain_pct": 0.21077928569807275,
+      "category": "Other"
+    },
+    {
+      "feature": "total_bid_volume_10",
+      "importance_split": 68,
+      "importance_gain": 639.5951352715492,
+      "importance_gain_pct": 0.20936495239271624,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "ask_volume_concentration",
+      "importance_split": 56,
+      "importance_gain": 607.0939381718636,
+      "importance_gain_pct": 0.198726016590628,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "ask_quote_lifetime",
+      "importance_split": 73,
+      "importance_gain": 567.5613615512848,
+      "importance_gain_pct": 0.18578543032645187,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "bid_quote_lifetime",
+      "importance_split": 75,
+      "importance_gain": 557.6123342514038,
+      "importance_gain_pct": 0.182528717584087,
+      "category": "Stability Indicators"
+    },
+    {
+      "feature": "order_book_imbalance_3",
+      "importance_split": 53,
+      "importance_gain": 527.5423177480698,
+      "importance_gain_pct": 0.17268560398536362,
+      "category": "Order Book Imbalance"
+    },
+    {
+      "feature": "total_bid_volume_4",
+      "importance_split": 41,
+      "importance_gain": 440.5513141155243,
+      "importance_gain_pct": 0.14420998506685828,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_3",
+      "importance_split": 36,
+      "importance_gain": 408.7131037712097,
+      "importance_gain_pct": 0.13378807122572714,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_6",
+      "importance_split": 30,
+      "importance_gain": 370.6685767173767,
+      "importance_gain_pct": 0.121334582829435,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_2",
+      "importance_split": 36,
+      "importance_gain": 363.1723780632019,
+      "importance_gain_pct": 0.11888077855887669,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_4",
+      "importance_split": 34,
+      "importance_gain": 350.7313401699066,
+      "importance_gain_pct": 0.11480833153324402,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_5",
+      "importance_split": 32,
+      "importance_gain": 309.75503063201904,
+      "importance_gain_pct": 0.1013951540049523,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_3",
+      "importance_split": 31,
+      "importance_gain": 296.7086478471756,
+      "importance_gain_pct": 0.09712455349532487,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "price_impact_1",
+      "importance_split": 17,
+      "importance_gain": 290.34157705307007,
+      "importance_gain_pct": 0.09504035772807128,
+      "category": "Price Impact"
+    },
+    {
+      "feature": "total_bid_volume_5",
+      "importance_split": 23,
+      "importance_gain": 236.83643865585327,
+      "importance_gain_pct": 0.077525995695685,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_6",
+      "importance_split": 13,
+      "importance_gain": 182.9051594734192,
+      "importance_gain_pct": 0.059872140818076035,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_7",
+      "importance_split": 17,
+      "importance_gain": 175.8870813846588,
+      "importance_gain_pct": 0.05757484444430381,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_8",
+      "importance_split": 16,
+      "importance_gain": 158.58269906044006,
+      "importance_gain_pct": 0.05191043115892563,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_7",
+      "importance_split": 13,
+      "importance_gain": 139.1015418767929,
+      "importance_gain_pct": 0.04553347279669911,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_9",
+      "importance_split": 13,
+      "importance_gain": 136.26108169555664,
+      "importance_gain_pct": 0.04460367709028641,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_ask_volume_9",
+      "importance_split": 14,
+      "importance_gain": 131.68084859848022,
+      "importance_gain_pct": 0.04310438444180525,
+      "category": "Volume Features"
+    },
+    {
+      "feature": "total_bid_volume_8",
+      "importance_split": 9,
+      "importance_gain": 81.11302947998047,
+      "importance_gain_pct": 0.02655152395475156,
+      "category": "Volume Features"
+    }
+  ],
+  "summary": {
+    "total_features": 118,
+    "features_for_80pct": 1,
+    "features_for_90pct": 1,
+    "features_for_95pct": 1,
+    "new_features_importance": {
+      "ofi": 16.23352069918306,
+      "pressure": 4.539661881159264,
+      "stability": 14.17616474566519,
+      "concentration": 0
+    }
+  }
+}

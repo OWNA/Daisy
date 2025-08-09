@@ -1,0 +1,100 @@
+================================================================================
+ADDITIONAL CONSIDERATIONS TO STRENGTHEN THE TRADING SYSTEM PLAN
+================================================================================
+Date: January 7, 2025
+Author: AI Assistant
+
+This document lists supplementary recommendations that augment the existing
+“TRADING SYSTEM DEBUGGING PLAN & TODO LIST”. These items focus on long-term
+maintainability, reliability, and scalability.
+
+--------------------------------------------------------------------------------
+1. Automated CI/CD & Quality Gates
+--------------------------------------------------------------------------------
+• Introduce a Phase-0 task to set up a lightweight CI pipeline (e.g., GitHub Actions)
+  – Run unit tests, linters, and type-checks on every push
+  – Enforce ≥ 80 % test coverage
+  – Build and push a Docker image to a registry
+• Add pre-commit hooks (black/ruff/flake8, mypy) to maintain style and type safety
+
+--------------------------------------------------------------------------------
+2. Configuration & Secrets Management
+--------------------------------------------------------------------------------
+• Consolidate YAML configs into a hierarchical config system (pydantic-based or dynaconf)
+• Store API keys and secrets in a secure secrets manager (Vault, AWS Secrets Manager)
+
+--------------------------------------------------------------------------------
+3. Observability from Day 1
+--------------------------------------------------------------------------------
+• Implement structured JSON logging with loguru/structlog
+• Expose key Prometheus metrics (collection latency, rows/sec, DB write latency)
+• Add OpenTelemetry traces around data-collection and feature-engineering pipelines
+
+--------------------------------------------------------------------------------
+4. Resilience & Fault Tolerance
+--------------------------------------------------------------------------------
+• Wrap critical pipelines with retry/back-off logic (tenacity)
+• Create a dead-letter queue for malformed L2 messages
+• Plan for DB failover/replica to separate write and read workloads
+
+--------------------------------------------------------------------------------
+5. Data-Versioning Strategy
+--------------------------------------------------------------------------------
+• Adopt a data-versioning tool (DVC, LakeFS, DeltaLake) to snapshot raw and derived data
+
+--------------------------------------------------------------------------------
+6. Schema-Migration Automation
+--------------------------------------------------------------------------------
+• Use Alembic or yoyo-migrations to version-control DB schema changes
+
+--------------------------------------------------------------------------------
+7. Formal API Contracts
+--------------------------------------------------------------------------------
+• Define protobuf/OpenAPI contracts if external services consume DB or features
+
+--------------------------------------------------------------------------------
+8. Model Registry & Experiment Tracking
+--------------------------------------------------------------------------------
+• Introduce MLflow or Neptune.ai to track experiments, parameters, and artifacts
+
+--------------------------------------------------------------------------------
+9. Security Posture Review
+--------------------------------------------------------------------------------
+• Run dependency-vulnerability scans (Snyk, Dependabot)
+• Enforce TLS and least-privilege DB access
+• Add input-sanitization checks in interactive scripts
+
+--------------------------------------------------------------------------------
+10. Documentation Debt Reduction
+--------------------------------------------------------------------------------
+• Centralize documentation with mkdocs-material
+• Add an operational “Runbook” for common tasks (restart collector, DB restore)
+
+--------------------------------------------------------------------------------
+11. Containerization & Local Dev Parity
+--------------------------------------------------------------------------------
+• Provide a Docker Compose stack (DB, message queue, notebook) for contributors
+
+--------------------------------------------------------------------------------
+12. Scheduled Technical-Debt Reviews
+--------------------------------------------------------------------------------
+• After each phase, conduct a debt-triage session to reassess priorities
+
+--------------------------------------------------------------------------------
+13. Governance / RACI Matrix
+--------------------------------------------------------------------------------
+• Assign clear ownership for each major component (collector, features, risk manager)
+
+--------------------------------------------------------------------------------
+14. Staging Environment & Canary Releases
+--------------------------------------------------------------------------------
+• Route a fraction of traffic to a staging schema before promoting to production
+
+--------------------------------------------------------------------------------
+15. End-to-End Latency Budget
+--------------------------------------------------------------------------------
+• Define acceptable latency thresholds for each pipeline stage and profile against them
+
+================================================================================
+END OF DOCUMENT
+================================================================================ 

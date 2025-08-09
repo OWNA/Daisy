@@ -1,0 +1,48 @@
+{
+  "total_tests": 7,
+  "passed": 6,
+  "failed": 1,
+  "success_rate": 85.71428571428571,
+  "performance_metrics": {
+    "database_connectivity": {
+      "passed": true,
+      "duration_ms": 472.43523597717285,
+      "details": "Tables found: ['models', 'l2_training_data_practical', 'l2_features'], Rows: 519104, Quality rows: 9357"
+    },
+    "l2_data_loading": {
+      "passed": true,
+      "duration_ms": 33.99491310119629,
+      "details": "Loaded 500 rows, columns: 48"
+    },
+    "feature_generation": {
+      "passed": true,
+      "duration_ms": 7.0018768310546875,
+      "details": "Generated 11 features from 500 samples"
+    },
+    "model_training": {
+      "passed": false,
+      "duration_ms": 16.02935791015625,
+      "details": "Model training failed: Target engineering failed"
+    },
+    "model_prediction": {
+      "passed": true,
+      "duration_ms": 0.9984970092773438,
+      "details": "Mock predictions generated for pipeline testing"
+    },
+    "order_execution_prep": {
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": "Prepared place_order for signal 1 with confidence 0.750"
+    },
+    "performance_metrics": {
+      "passed": true,
+      "duration_ms": 0.0,
+      "details": "All performance requirements met. Total pipeline time: 514ms"
+    }
+  },
+  "bottlenecks": [],
+  "errors": [
+    "model_training: Model training failed: Target engineering failed"
+  ],
+  "total_test_duration_s": 0.5394344329833984
+}

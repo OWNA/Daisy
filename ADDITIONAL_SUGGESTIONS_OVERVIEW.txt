@@ -1,0 +1,17 @@
+ADDITIONAL SUGGESTIONS – EXECUTIVE SUMMARY
+=================================================
+1. CI/CD & Quality Gates: Add GitHub Actions pipeline (tests, ≥80 % coverage, Docker build) plus pre-commit hooks.
+2. Config & Secrets: Move to hierarchical config (pydantic/dynaconf) and vault-based secrets.
+3. Observability: Structured JSON logs, Prometheus metrics, OpenTelemetry traces from day one.
+4. Resilience: Retry/back-off logic, dead-letter queue, DB replica/failover.
+5. Data Versioning: Snapshot raw + derived data via DVC/LakeFS/DeltaLake.
+6. DB Migrations: Automate schema changes with Alembic/yoyo.
+7. API Contracts: Define protobuf/OpenAPI schemas for external consumers.
+8. Model Ops: Track experiments and artifacts in MLflow/Neptune.
+9. Security: Dependabot/Snyk scanning, TLS, least-privilege DB creds, input sanitation.
+10. Docs & Runbooks: Centralize docs (mkdocs), include ops runbook.
+11. Containerization: Provide Docker Compose stack for consistent dev environments.
+12. Debt Reviews: Hold post-phase debt-triage sessions.
+13. Governance: Establish RACI matrix for component ownership.
+14. Canary Releases: Staging schema + partial traffic before prod rollout.
+15. Latency Budget: Define & monitor target latency for each pipeline stage. 

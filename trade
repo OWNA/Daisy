@@ -1,0 +1,18 @@
+#!/bin/bash
+# Trading Bot CLI Wrapper
+
+# Activate virtual environment if not already active
+if [[ -z "$VIRTUAL_ENV" ]]; then
+    if [ -f "venv/bin/activate" ]; then
+        source venv/bin/activate
+    else
+        echo "Virtual environment not found. Run 'python3 -m venv venv' first."
+        exit 1
+    fi
+fi
+
+# Install rich if not available
+python -c "import rich" 2>/dev/null || pip install rich click >/dev/null 2>&1
+
+# Run the CLI
+python trade_cli.py "$@"
